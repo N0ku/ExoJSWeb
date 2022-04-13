@@ -1,0 +1,407 @@
+@keyframes luminousDot {
+    from {
+        box-shadow: 1px 1px 20px 10px var(--shadow-color);
+    }
+
+    to {
+        box-shadow: none;
+    }
+}
+
+@keyframes smoothMove {
+    from {
+        transform: translate(0px);
+    }
+
+    to {
+        transform: translate(0px, 20px);
+    }
+}
+
+@keyframes Move {
+    to {
+        transform: translate(300px, 0px);
+    }
+}
+
+@keyframes rotate {
+    to {
+        transform: rotate(180deg);
+    }
+}
+
+@keyframes randMove {
+    to {
+        transform: translate(var(--length), var(--height));
+    }
+}
+
+:root {
+    background-color: black;
+    color: white;
+    border-color: white;
+}
+
+h1,
+h2 {
+    text-align: center;
+}
+
+#boxOriginal {
+    display: none;
+    visibility: hidden;
+}
+
+#allArticles {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.box {
+    border: 1px rgb(243, 243, 243) solid;
+    border-radius: 20px;
+    padding: 3% 5%;
+    margin: 2%;
+    text-align: center;
+    background-color: white;
+    ;
+}
+
+.logo {
+    max-height: 100px;
+}
+
+.circle {
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    display: inline-block;
+    position: absolute;
+    animation: luminousDot 3s none 0s infinite alternate linear;
+}
+
+#blue {
+    background-color: rgb(0, 183, 255);
+    top: 30%;
+    --shadow-color: rgb(0, 183, 255);
+}
+
+#green {
+    background-color: rgb(29, 240, 29);
+    left: 80%;
+    top: 90%;
+    --shadow-color: rgb(29, 240, 29);
+}
+
+#orange {
+    top: 30%;
+    left: 90%;
+    background-color: rgb(240, 131, 29);
+    --shadow-color: rgb(240, 131, 29);
+}
+
+#yellow {
+    background-color: rgb(241, 225, 81);
+    --shadow-color: rgb(241, 225, 81);
+}
+
+.circleMove {
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    display: inline-block;
+    position: absolute;
+    animation: smoothMove 4s none 0s infinite alternate-reverse linear, luminousDot 3s none 0s infinite alternate-reverse linear;
+}
+
+#pink {
+    background-color: rgb(250, 143, 245);
+    --shadow-color: rgb(250, 143, 245);
+    left: 40%;
+    top: 40%;
+}
+
+#white {
+    background-color: rgb(255, 255, 255);
+    --shadow-color: rgb(255, 255, 255);
+    left: 20%;
+    top: 40%;
+}
+
+#purple {
+    background-color: rgb(162, 0, 255);
+    --shadow-color: rgb(162, 0, 255);
+    top: 50%;
+    left: 70%;
+}
+
+#red {
+    background-color: rgb(233, 40, 40);
+    top: 70%;
+    left: 80%;
+    --shadow-color: rgb(233, 40, 40);
+}
+
+.circles {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    margin-top: 40%;
+    margin-left: 10%;
+}
+
+.circleML {
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    display: inline-block;
+    background-color: aqua;
+    --shadow-color: aqua;
+    animation: luminousDot 3s none 0s infinite alternate-reverse linear, smoothMove 1s none 0s infinite alternate-reverse linear;
+}
+
+.circleRandom {
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    display: inline-block;
+    position: absolute;
+}
+
+#bluegreen {
+    background-color: darkcyan;
+    --shadow-color: darkcyan;
+    top: var(--top);
+    bottom: var(--bottom);
+    right: var(--right);
+    left: var(--left);
+    animation: randMove 5s none 0s infinite alternate linear, luminousDot 3s none 0s infinite linear;
+}
+
+#greenpastel {
+    background-color: rgb(61, 255, 136);
+    --shadow-color: rgb(61, 255, 136);
+    top: var(--top);
+    bottom: var(--bottom);
+    right: var(--right);
+    left: var(--left);
+    animation: randMove 5s none 0s infinite alternate linear, luminousDot 3s none 0s infinite linear;
+
+}
+
+#pinkpastel {
+    background-color: rgb(238, 148, 204);
+    --shadow-color: rgb(238, 148, 204);
+    top: var(--top);
+    bottom: var(--bottom);
+    right: var(--right);
+    left: var(--left);
+    animation: randMove 5s none 0s infinite alternate linear, luminousDot 3s none 0s infinite linear;
+
+}
+
+#redpastel {
+    background-color: rgb(235, 66, 66);
+    --shadow-color: rgb(235, 66, 66);
+    top: var(--top);
+    bottom: var(--bottom);
+    right: var(--right);
+    left: var(--left);
+    animation: randMove 5s none 0s infinite alternate linear, luminousDot 3s none 0s infinite linear;
+
+}
+
+#orangepastel {
+    background-color: rgb(252, 178, 129);
+    --shadow-color: rgb(252, 178, 129);
+    top: var(--top);
+    bottom: var(--bottom);
+    right: var(--right);
+    left: var(--left);
+    animation: randMove 5s none 0s infinite alternate linear, luminousDot 3s none 0s infinite linear;
+
+}
+
+.square {
+    height: 25px;
+    width: 25px;
+    position: absolute;
+}
+
+#Spink {
+    top: var(--top);
+    bottom: var(--bottom);
+    right: var(--right);
+    left: var(--left);
+    animation: rotate 500ms none 0s infinite normal linear;
+}
+
+#Swhite {
+    top: var(--top);
+    bottom: var(--bottom);
+    right: var(--right);
+    left: var(--left);
+    animation: rotate 500ms none 0s infinite normal linear;
+}
+
+#Syellow {
+    top: var(--top);
+    bottom: var(--bottom);
+    right: var(--right);
+    left: var(--left);
+    animation: rotate 500ms none 0s infinite normal linear;
+}
+
+#Sgreen {
+    top: var(--top);
+    bottom: var(--bottom);
+    right: var(--right);
+    left: var(--left);
+    animation: rotate 500ms none 0s infinite normal linear;
+}
+
+#Sblue {
+    top: var(--top);
+    bottom: var(--bottom);
+    right: var(--right);
+    left: var(--left);
+    animation: rotate 500ms none 0s infinite normal linear;
+}
+
+#Sorange {
+    top: var(--top);
+    bottom: var(--bottom);
+    right: var(--right);
+    left: var(--left);
+    animation: rotate 500ms none 0s infinite normal linear;
+}
+
+.Lsquare {
+    height: 25px;
+    width: 25px;
+    position: absolute;
+}
+
+#SLpink {
+    top: var(--top);
+    bottom: var(--bottom);
+    right: var(--right);
+    left: var(--left);
+    --shadow-color: rgb(255, 126, 255);
+
+    animation: luminousDot 3s none 0s infinite linear;
+}
+
+#SLwhite {
+    top: var(--top);
+    bottom: var(--bottom);
+    right: var(--right);
+    left: var(--left);
+    --shadow-color: rgb(255, 255, 255);
+
+    animation: luminousDot 3s none 0s infinite linear;
+}
+
+#SLyellow {
+    top: var(--top);
+    bottom: var(--bottom);
+    right: var(--right);
+    left: var(--left);
+    --shadow-color: rgb(247, 236, 90);
+
+    animation: luminousDot 3s none 0s infinite linear;
+}
+
+#SLgreen {
+    top: var(--top);
+    bottom: var(--bottom);
+    right: var(--right);
+    left: var(--left);
+    --shadow-color: rgb(188, 252, 129);
+
+    animation: luminousDot 3s none 0s infinite linear;
+}
+
+#SLblue {
+    top: var(--top);
+    bottom: var(--bottom);
+    right: var(--right);
+    left: var(--left);
+    --shadow-color: rgb(90, 161, 253);
+
+    animation: luminousDot 3s none 0s infinite linear;
+}
+
+#SLorange {
+    top: var(--top);
+    bottom: var(--bottom);
+    right: var(--right);
+    left: var(--left);
+    --shadow-color: rgb(241, 124, 46);
+    animation: luminousDot 3s none 0s infinite linear;
+}
+
+.line {
+    position: absolute;
+    display: inline-block;
+    width: 60px;
+    height: 10px;
+    top: var(--top);
+    bottom: var(--bottom);
+    right: var(--right);
+    left: var(--left);
+    border-radius: 5px;
+    animation: rotate 100ms none infinite linear, luminousDot 3s infinite;
+}
+
+#Lyellow {
+    background-color: rgb(247, 231, 16);
+}
+
+#Lred {
+    background-color: red;
+}
+
+#Lpink {
+    background-color: rgb(241, 159, 217);
+}
+
+#Lblue {
+    background-color: rgb(0, 119, 255);
+}
+
+#Lgreen {
+    background-color: rgb(116, 209, 116);
+}
+
+#Lorange {
+    background-color: orange;
+}
+
+#Lwhite {
+    background-color: white;
+}
+
+#pause {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-top: 25px solid transparent;
+    border-bottom: 25px solid transparent;
+    border-left: 50px solid rgb(255, 255, 255);
+    right: 2%;
+    top: 1%;
+}
+
+#play {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-style: double;
+    border-width: 0px 0px 0px 37px;
+    border-color: #eeeeee;
+    right: 2%;
+    top: 1%;
+}
